@@ -5,7 +5,7 @@ A personal resume website made with HTML and CSS for the Web Development mid-ter
 ## Files
 - `index.html`: about, education, experience, skills, project, hobbies and contact sections.
 - `style.css`: colours, typography, layouts and responsive styling.
-- `profile.jpeg`: profile photograph used in the introduction.
+- `profile.png`: profile photograph used in the introduction.
 
 ## CSS concepts used
 
