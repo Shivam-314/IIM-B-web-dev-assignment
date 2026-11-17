@@ -1,9 +1,9 @@
-/* Base styles and element selectors */
 * { box-sizing: border-box; }
 html { scroll-padding-top: 110px; }
-body { margin: 0; background: #fffdef; color: #171713; font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 1.65; }
+body { margin: 0; background: #fffdef; color: #171713; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.65; }
 h1, h2, h3, p { margin-top: 0; }
 h1, h2, h3 { line-height: 1.12; }
+h1, h2, h3, .brand { font-family: "Trebuchet MS", Arial, sans-serif; }
 h1, h2 { letter-spacing: -2px; }
 h2 { font-size: 48px; margin-bottom: 22px; }
 h3 { font-size: 24px; margin-bottom: 16px; letter-spacing: -0.5px; }
@@ -11,13 +11,12 @@ a { color: inherit; text-underline-offset: 5px; }
 a:focus-visible { outline: 3px solid #9e3028; outline-offset: 6px; }
 .container { width: 90%; max-width: 1120px; margin: 0 auto; }
 .section { padding-top: 90px; padding-bottom: 90px; }
-.eyebrow { font-size: 11px; letter-spacing: 1.8px; font-weight: bold; margin-bottom: 22px; }
+.eyebrow { font-family: Verdana, Arial, sans-serif; font-size: 11px; letter-spacing: 1.8px; font-weight: bold; margin-bottom: 22px; }
 .section-heading { margin-bottom: 42px; }
 .section-description { color: #57574d; }
 .skip-link { position: absolute; left: 12px; top: -100px; padding: 12px; background: #171713; color: white; z-index: 10; }
 .skip-link:focus { top: 12px; }
 
-/* Navigation uses Flexbox; links jump to section IDs. */
 header { position: sticky; top: 0; z-index: 20; background: #fffdef; border-bottom: 1px solid #e2dfd1; }
 .navigation { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding-top: 22px; padding-bottom: 22px; }
 .brand { text-decoration: none; font-size: 26px; font-weight: bold; letter-spacing: -1px; }
@@ -26,7 +25,6 @@ nav ul { display: flex; flex-wrap: wrap; gap: 22px; padding: 0; margin: 0; list-
 nav a { text-decoration: none; font-size: 13px; }
 nav li a:hover { text-decoration: underline; }
 
-/* Hero and simple reusable buttons */
 .hero { text-align: center; padding: 80px 0 0; }
 .hero h1 { font-size: 88px; font-weight: 800; margin: 24px 0; letter-spacing: -5px; }
 .hero-layout { display: flex; align-items: center; justify-content: space-between; gap: 32px; max-width: 1000px; margin: 0 auto; text-align: left; }
@@ -45,7 +43,6 @@ nav li a:hover { text-decoration: underline; }
 .hero-notes p { margin: 0; font-size: 14px; }
 .hero-notes span { display: block; font-size: 10px; letter-spacing: 1.3px; margin-bottom: 8px; color: #55564d; }
 
-/* About: a simple name card beside the introduction. */
 .about-layout { display: flex; align-items: center; gap: 70px; }
 .initial-card { flex: 0 0 35%; border: 2px solid #171713; border-radius: 22px; padding: 28px; background: #f2eddb; }
 .profile-name { display: block; font-size: 54px; letter-spacing: -2px; font-weight: bold; line-height: 1.5; margin: 22px 0 30px; }
@@ -54,7 +51,6 @@ nav li a:hover { text-decoration: underline; }
 .about-copy p { margin-bottom: 20px; }
 .text-link { font-weight: bold; color: #171713; }
 
-/* Education cards use a two-column grid. */
 .education { background: #f2efdf; border-top: 1px solid #dedbcc; border-bottom: 1px solid #dedbcc; }
 .education-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
 .education-card { border: 1px solid #171713; border-radius: 20px; background: #fffdef; padding: 30px; }
@@ -66,7 +62,6 @@ nav li a:hover { text-decoration: underline; }
 .school-card h3 { font-size: 19px; margin-bottom: 10px; }
 .school-card p { font-size: 13px; }
 
-/* Experience is a simple list with dividers. */
 .experience-row { display: flex; align-items: flex-start; gap: 30px; border-top: 1px solid #bdbbad; padding: 30px 0; }
 .experience-row:last-child { border-bottom: 1px solid #bdbbad; }
 .experience-number { font-size: 20px; color: #b3382f; margin: 0; }
@@ -76,7 +71,6 @@ nav li a:hover { text-decoration: underline; }
 .experience-row div > p:last-child { color: #55564d; max-width: 590px; margin-bottom: 0; }
 .pill { font-size: 11px; border: 1px solid #a6a697; border-radius: 20px; padding: 6px 12px; white-space: nowrap; }
 
-/* Colourful service-style rows inspired by the portfolio reference. */
 .skills { background: #fffdef; color: #171713; }
 .skills .eyebrow { color: #57574d; }
 .skills-grid { display: grid; grid-template-columns: 1fr; gap: 30px; }
@@ -90,7 +84,6 @@ nav li a:hover { text-decoration: underline; }
 .skill-details { max-width: 390px; text-align: right; }
 .skill-details span { display: inline-block; margin: 12px 0 0 6px; padding: 3px 10px; border: 1px solid #171713; border-radius: 18px; font-size: 10px; letter-spacing: 0.5px; }
 
-/* This class assignment is included as the project section. */
 .projects { background: #f2efdf; border-top: 1px solid #dedbcc; border-bottom: 1px solid #dedbcc; }
 .project-card { display: grid; grid-template-columns: 1fr 1fr; gap: 55px; padding: 35px; border: 1px solid #171713; border-radius: 20px; background: #fffdef; }
 .project-card + .project-card { margin-top: 22px; }
@@ -106,7 +99,6 @@ nav li a:hover { text-decoration: underline; }
 .curiosity span { margin-right: 16px; }
 .curiosity span:first-child { font-size: 10px; letter-spacing: 1px; }
 
-/* Contact and footer */
 #contact { background: #f2efdf; border-top: 1px solid #dedbcc; }
 .contact-layout { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
 .contact h2 { font-size: 60px; }
@@ -118,7 +110,6 @@ nav li a:hover { text-decoration: underline; }
 footer { display: flex; justify-content: space-between; gap: 25px; padding-top: 24px; padding-bottom: 24px; font-size: 12px; }
 footer p { margin: 0; }
 
-/* Smaller screens: cards and columns stack for easier reading. */
 @media (max-width: 900px) {
   html { scroll-padding-top: 155px; }
   .navigation { align-items: flex-start; flex-direction: column; gap: 12px; }
